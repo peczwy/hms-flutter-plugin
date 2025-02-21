@@ -27,13 +27,27 @@ android {
     namespace "com.huawei.hms.flutter.iap"
     compileSdkVersion 35
     buildToolsVersion "31.0.0"
+
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+        }
+    }
+
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 35
     }
+
     lintOptions {
         disable 'InvalidPackage'
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
